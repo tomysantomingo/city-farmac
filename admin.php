@@ -1,0 +1,3 @@
+<?php
+
+echo "Panel de administración";
