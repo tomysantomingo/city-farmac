@@ -1,0 +1,15 @@
+# Configuraciones locales
+.env
+.env.*
+!.env.example
+
+# Configuraciones del editor
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de registro
+*.log
