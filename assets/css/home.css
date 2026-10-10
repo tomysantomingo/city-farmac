@@ -1,0 +1,12 @@
+/* PRESENTACIÓN */
+
+.hero {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* HOME - PRODUCTOS DESTACADOS */
+
+.productos-destacados h2 {
+    text-align: center;
+}

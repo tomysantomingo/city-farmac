@@ -7,7 +7,13 @@
 
     <title>City Farmac</title>
 
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/styles.css">
+        <!-- Estilos globales -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/global.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/global.css') ?>">
+
+    <!-- Estilos específicos del Home -->
+    <?php if ($page === 'home'): ?>
+        <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/home.css') ?>">
+    <?php endif; ?>
 </head>
 
 <body>
