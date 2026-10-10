@@ -1,0 +1,61 @@
+
+.error-body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f6f6;
+}
+
+/* Tarjeta de error */
+
+.error-card {
+    background-color: white;
+    max-width: 500px;
+    width: 100%;
+    padding: 45px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos y descripción */
+
+.error-card h1 {
+    font-size: 6rem;
+    color: #087f73;
+    margin: 0;
+}
+
+.error-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.error-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botón de regreso */
+
+.error-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #087f73;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.error-button:hover {
+    background-color: #06665d;
+}
+
+.error-button:focus-visible {
+    outline: 3px solid #202b2b;
+    outline-offset: 3px;
+}
