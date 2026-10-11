@@ -10,7 +10,9 @@ $productos = [
         18500,
         5,
         'productos/protector-solar.webp',
-        true
+        true,
+        'Farmacia',
+        'Protección solar'
     ),
 
     new Producto(
@@ -20,9 +22,11 @@ $productos = [
         8500,
         4,
         'productos/shampoo-reparador.jpg',
-        true
+        true,
+        'Cuidado personal',
+        'Cuidado capilar'
     ),
-
+    
     new Producto(
         3,
         'Crema Hidratante',
@@ -30,7 +34,9 @@ $productos = [
         7200,
         4,
         'productos/crema-hidratante.png',
-        true
+        true,
+        'Cuidado personal',
+        'Cuidado facial'
     ),
 
     new Producto(
@@ -40,7 +46,9 @@ $productos = [
         32000,
         5,
         'productos/perfume-the-icon.jpg',
-        true
+        true,
+        'Perfumería',
+        'Perfumes'
     ),
 
     new Producto(
@@ -50,7 +58,9 @@ $productos = [
         9400,
         4,
         'productos/agua-micelar.webp',
-        true
+        true,
+        'Cuidado personal',
+        'Cuidado facial'    
     ),
 
     new Producto(
@@ -60,6 +70,8 @@ $productos = [
         4500,
         3,
         'productos/balsamo-labial.webp',
-        true
+        true,
+        'Farmacia',
+        'Cuidado Labial'
     )
 ];

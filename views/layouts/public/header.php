@@ -14,6 +14,13 @@
     <?php if ($page === 'home'): ?>
         <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/home.css') ?>">
     <?php endif; ?>
+
+    <!-- Estilos específicos del productos -->
+    <?php if ($page === 'productos'): ?>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/productos.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/productos.css') ?>">
+    <?php endif; ?>
+
+
 </head>
 
 <body>

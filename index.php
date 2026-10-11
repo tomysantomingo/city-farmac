@@ -28,6 +28,7 @@ switch ($page) {
     break;
 
     case 'productos':
+    require_once __DIR__ . '/controllers/catalogo.php';
     $vista = __DIR__ . '/views/public/productos.php';
     break;
 
