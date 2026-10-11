@@ -26,6 +26,13 @@ switch ($seccion) {
     $vista = __DIR__ . '/views/admin/productos.php';
     break;
 
+    case 'categorias':
+    require_once __DIR__ . '/data/categorias.php';
+    require_once __DIR__ . '/controllers/admin/categorias.php';
+
+    $vista = __DIR__ . '/views/admin/categorias.php';
+    break;
+
     default:
         http_response_code(404);
         require __DIR__ . '/views/public/404.php';
