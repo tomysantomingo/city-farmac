@@ -8,12 +8,15 @@
         con nosotros.
     </p>
 
-    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-        <div class="contacto-mensaje" role="status">
-            Formulario de demostración.
-            Tu mensaje no fue enviado.
-        </div>
-    <?php endif; ?>
+    <?php
+
+        $mensajeAviso = $_SERVER['REQUEST_METHOD'] === 'POST'
+            ? 'Formulario de demostración: tu mensaje no fue enviado.'
+            : '';
+
+        require __DIR__ . '/../components/aviso.php';
+        
+    ?>
 
     <form
         class="contacto-formulario"

@@ -1,11 +1,13 @@
 
 <h2>Registro de usuario</h2>
 
-<?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-    <p class="admin-aviso" role="status">
-        Formulario de demostración. No se creó ningún usuario.
-    </p>
-<?php endif; ?>
+<?php
+$mensajeAviso = $_SERVER['REQUEST_METHOD'] === 'POST'
+    ? 'Formulario de demostración: no se creó ningún usuario.'
+    : '';
+
+require __DIR__ . '/../components/aviso.php';
+?>
 
 <form class="admin-form"
       action="<?= BASE_URL ?>/admin.php?page=registro"

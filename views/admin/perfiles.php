@@ -12,7 +12,7 @@
 </h2>
 
 <?php
-require __DIR__ . '/../components/admin/aviso.php';
+require __DIR__ . '/../components/aviso.php';
 ?>
 
 <?php if ($accionPerfil === 'listar'): ?>

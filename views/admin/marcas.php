@@ -14,7 +14,7 @@
 <?php
 
 $mensajeAviso = $avisoMarca;
-require __DIR__ . '/../components/admin/aviso.php';
+require __DIR__ . '/../components/aviso.php';
 ?>
 
 <?php if ($accionMarca === 'listar'): ?>

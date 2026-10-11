@@ -74,12 +74,16 @@
 
         <h3>Dejá tu comentario</h3>
 
-        <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-            <p role="status">
-                Formulario de demostración: tu comentario no se guardó.
-            </p>
-        <?php endif; ?>
+        <?php
 
+            $mensajeAviso = $_SERVER['REQUEST_METHOD'] === 'POST'
+                ? 'Formulario de demostración: tu comentario no se guardó.'
+                : '';
+
+            require __DIR__ . '/../components/aviso.php';
+
+        ?>
+        
         <form method="POST"
               action="<?= BASE_URL ?>/index.php?page=detalle&amp;id=<?= $productoDetalle->id ?>">
 

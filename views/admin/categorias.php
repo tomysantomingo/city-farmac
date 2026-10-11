@@ -9,12 +9,13 @@
 
     <p>Gestioná las categorías y subcategorías de City Farmac.</p>
 
-    <?php if ($avisoCategoria !== ''): ?>
-        <p class="admin-aviso" role="status">
-            <?= htmlspecialchars($avisoCategoria) ?>
-        </p>
-    <?php endif; ?>
-
+    
+  
+    <?php
+        $mensajeAviso = $avisoCategoria;
+        require __DIR__ . '/../components/aviso.php';
+    ?>
+   
     <a class="admin-boton admin-enlace-boton"
        href="<?= BASE_URL ?>/admin.php?page=categorias&amp;accion=crear">
         Agregar categoría
@@ -106,11 +107,11 @@
 
     <p>Completá los datos de la categoría.</p>
 
-    <?php if ($avisoCategoria !== ''): ?>
-        <p class="admin-aviso" role="status">
-            <?= htmlspecialchars($avisoCategoria) ?>
-        </p>
-    <?php endif; ?>
+    
+    <?php
+        $mensajeAviso = $avisoCategoria;
+        require __DIR__ . '/../components/aviso.php';
+    ?>
 
     <form class="admin-form"
           method="POST"

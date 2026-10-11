@@ -4,11 +4,10 @@
     <h2>Administración de productos</h2>
     <p>Gestioná el catálogo de City Farmac.</p>
 
-    <?php if ($avisoAdmin !== ''): ?>
-        <p class="admin-aviso" role="status">
-            <?= htmlspecialchars($avisoAdmin) ?>
-        </p>
-    <?php endif; ?>
+    <?php
+    $mensajeAviso = $avisoAdmin;
+    require __DIR__ . '/../components/aviso.php';
+    ?>
 
     <a class="admin-boton admin-enlace-boton"
        href="<?= BASE_URL ?>/admin.php?page=productos&accion=crear">
@@ -136,11 +135,10 @@
             : 'Completá los datos del nuevo producto.' ?>
     </p>
 
-    <?php if ($avisoAdmin !== ''): ?>
-        <p class="admin-aviso" role="status">
-            <?= htmlspecialchars($avisoAdmin) ?>
-        </p>
-    <?php endif; ?>
+    <?php
+    $mensajeAviso = $avisoAdmin;
+    require __DIR__ . '/../components/aviso.php';
+    ?>
 
     <form
         class="admin-form"

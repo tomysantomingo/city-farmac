@@ -7,7 +7,7 @@
 </p>
 
 <?php
-require __DIR__ . '/../components/admin/aviso.php';
+require __DIR__ . '/../components/aviso.php';
 ?>
 
 <!-- Filtros -->
