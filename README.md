@@ -77,4 +77,4 @@ Los productos, categorías, marcas, comentarios, usuarios y perfiles de ejemplo 
 
 El desarrollo se realiza en la rama `develop`, registrando cambios mediante commits progresivos. La rama `master` se mantiene separada.
 
-Repositorio GitHub: `https://github.com/tomysantomingo/city-farmac`
+Repositorio GitHub: `https://github.com/tomysantomingo/city-farmac/tree/develop`
