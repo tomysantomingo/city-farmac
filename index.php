@@ -12,6 +12,10 @@ switch ($page) {
         $vista = __DIR__ . '/views/public/home.php';
         break;
 
+    case 'productos':
+    $vista = __DIR__ . '/views/public/productos.php';
+    break;
+
     default:
     http_response_code(404);
     require __DIR__ . '/views/public/404.php';
