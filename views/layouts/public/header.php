@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/detalle.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/detalle.css') ?>">
     <?php endif; ?>
 
+    <!-- Estilos contacto -->
+    <?php if ($page === 'contacto'): ?>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/contacto.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/contacto.css') ?>">
+    <?php endif; ?>
+
 
 </head>
 

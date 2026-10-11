@@ -45,6 +45,10 @@ switch ($page) {
     $vista = __DIR__ . '/views/public/detalle.php';
     break;
 
+    case 'contacto':
+    $vista = __DIR__ . '/views/public/contacto.php';
+    break;
+
     default:
     http_response_code(404);
     require __DIR__ . '/views/public/404.php';
