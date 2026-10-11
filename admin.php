@@ -40,6 +40,14 @@ switch ($seccion) {
     $vista = __DIR__ . '/views/admin/marcas.php';
     break;
 
+    case 'comentarios':
+    require_once __DIR__ . '/data/productos.php';
+    require_once __DIR__ . '/data/comentarios.php';
+    require_once __DIR__ . '/controllers/admin/comentarios.php';
+
+    $vista = __DIR__ . '/views/admin/comentarios.php';
+    break;
+
     default:
         http_response_code(404);
         require __DIR__ . '/views/public/404.php';

@@ -2,6 +2,7 @@
 
 $comentarios = [
     [
+        'id' => 1,
         'producto_id' => 1,
         'comentario' => 'Muy buen producto, me gustó mucho.',
         'ranking' => 5,
@@ -9,6 +10,7 @@ $comentarios = [
         'aprobado' => true
     ],
     [
+        'id' => 2,
         'producto_id' => 1,
         'comentario' => 'Buena presentación y calidad.',
         'ranking' => 5,
@@ -16,6 +18,7 @@ $comentarios = [
         'aprobado' => true
     ],
     [
+        'id' => 3,
         'producto_id' => 2,
         'comentario' => 'Me gustó el shampoo.',
         'ranking' => 4,
@@ -23,6 +26,7 @@ $comentarios = [
         'aprobado' => true
     ],
     [
+        'id' => 4,
         'producto_id' => 1,
         'comentario' => 'Comentario pendiente de aprobación.',
         'ranking' => 3,
