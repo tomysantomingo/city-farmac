@@ -496,3 +496,88 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ========================================
+   TABLAS RESPONSIVE - FORMATO TARJETAS
+======================================== */
+
+@media (max-width: 768px) {
+
+    .admin-tabla-contenedor {
+        overflow: visible;
+    }
+
+    .admin-tabla {
+        width: 100%;
+        min-width: 0;
+        display: block;
+        background: transparent;
+    }
+
+    /* Conservar encabezados para accesibilidad,
+       pero ocultarlos visualmente */
+
+    .admin-tabla thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .admin-tabla tbody {
+        display: grid;
+        gap: 15px;
+    }
+
+    /* Cada fila se convierte en tarjeta */
+
+    .admin-tabla tbody tr {
+        display: block;
+        padding: 15px;
+        background: #f9fbfa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .admin-tabla td,
+    .admin-tabla td:last-child {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        overflow-wrap: anywhere;
+    }
+
+    .admin-tabla td:last-child {
+        border-bottom: none;
+    }
+
+    /* Nombre de cada dato */
+
+    .admin-tabla td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #075e54;
+    }
+
+    /* Acciones dentro de las tarjetas */
+
+    .admin-tabla .admin-acciones {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .admin-tabla .admin-acciones a {
+        white-space: normal;
+    }
+}
+

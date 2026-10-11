@@ -46,23 +46,23 @@
                 <?php foreach ($categoriasVisibles as $categoria): ?>
 
                     <tr>
-                        <td>
+                        <td data-label="Nombre">
                             <?= htmlspecialchars($categoria['nombre']) ?>
                         </td>
 
-                        <td>
+                        <td data-label="Tipo">
                             <?= $categoria['padre_id'] === null
                                 ? 'Principal'
                                 : 'Subcategoría' ?>
                         </td>
 
-                        <td>
+                        <td data-label="Estado">
                             <?= $categoria['activo']
                                 ? 'Activa'
                                 : 'Inactiva' ?>
                         </td>
 
-                        <td>
+                        <td data-label="Acciones">
                             <div class="admin-acciones">
 
                                 <a href="<?= BASE_URL ?>/admin.php?page=categorias&amp;accion=editar&amp;id=<?= $categoria['id'] ?>">

@@ -46,20 +46,20 @@ require __DIR__ . '/../components/aviso.php';
 
                     <tr>
 
-                        <td>
+                        <td data-label="Nombre del perfil">
                             <?= htmlspecialchars($perfil['nombre']) ?>
                         </td>
 
-                        <td>
+                        <td data-label="Estado">
                             <?= $perfil['activo'] ? 'Activo' : 'Inactivo' ?>
                         </td>
 
-                        <td>
+                        <td data-label="Secciones permitidas">
                             <?= count($perfil['permisos']) ?>
                             secciones
                         </td>
 
-                        <td>
+                        <td data-label="Acciones">
                             <div class="admin-acciones">
 
                                 <a href="<?= BASE_URL ?>/admin.php?page=perfiles&amp;accion=editar&amp;id=<?= $perfil['id'] ?>">

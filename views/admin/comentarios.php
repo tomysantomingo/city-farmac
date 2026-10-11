@@ -110,32 +110,32 @@ require __DIR__ . '/../components/aviso.php';
 
                 <tr>
 
-                    <td>
+                   <td data-label="Comentario">
                         <?= htmlspecialchars($comentario['comentario']) ?>
                     </td>
 
-                    <td>
+                    <td data-label="Producto">
                         <?= htmlspecialchars(
                             $productosPorId[$comentario['producto_id']]
                             ?? 'Producto no encontrado'
                         ) ?>
                     </td>
 
-                    <td>
+                    <td data-label="Ranking">
                         <?= $comentario['ranking'] ?> / 5
                     </td>
 
-                    <td>
+                   <td data-label="Fecha">
                         <?= htmlspecialchars($comentario['fecha']) ?>
                     </td>
 
-                    <td>
+                    <td data-label="Estado">
                         <?= $comentario['aprobado']
                             ? 'Aprobado'
                             : 'No aprobado' ?>
                     </td>
 
-                    <td>
+                   <td data-label="Acciones">
                         <div class="admin-acciones">
 
                             <a href="<?= htmlspecialchars(

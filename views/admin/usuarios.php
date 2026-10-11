@@ -46,26 +46,26 @@ require __DIR__ . '/../components/aviso.php';
 
                     <tr>
 
-                        <td>
+                        <td data-label="Nombre">
                             <?= htmlspecialchars($usuario['nombre']) ?>
                         </td>
 
-                        <td>
+                        <td data-label="Correo electrónico">
                             <?= htmlspecialchars($usuario['email']) ?>
                         </td>
 
-                        <td>
+                       <td data-label="Perfil">
                             <?= htmlspecialchars(
                                 $perfilesPorId[$usuario['perfil_id']]
                                 ?? 'Sin perfil'
                             ) ?>
                         </td>
 
-                        <td>
+                        <td data-label="Estado">
                             <?= $usuario['activo'] ? 'Activo' : 'Inactivo' ?>
                         </td>
 
-                        <td>
+                        <td data-label="Acciones">
                             <div class="admin-acciones">
 
                                 <a href="<?= BASE_URL ?>/admin.php?page=usuarios&amp;accion=editar&amp;id=<?= $usuario['id'] ?>">

@@ -76,11 +76,15 @@
             <tbody>
                 <?php foreach ($productosAdmin as $producto): ?>
                     <tr>
-                        <td><?= htmlspecialchars($producto->nombre) ?></td>
+                        <td data-label="Producto">
+
+                            <?= htmlspecialchars($producto->nombre) ?>
+
+                        </td>
 
                         <td><?= htmlspecialchars($producto->marca) ?></td>
 
-                        <td>
+                        <td data-label="Categoría">
                             <?= htmlspecialchars($producto->categoria) ?>
                             <small>
                                 <?= htmlspecialchars($producto->subcategoria) ?>
@@ -93,7 +97,7 @@
 
                         <td><?= $producto->destacado ? 'Sí' : 'No' ?></td>
 
-                        <td>
+                        <td data-label="Acciones">
                             <div class="admin-acciones">
                                 <a href="<?= BASE_URL ?>/admin.php?page=productos&accion=editar&id=<?= $producto->id ?>">
                                     Modificar

@@ -46,15 +46,15 @@ require __DIR__ . '/../components/aviso.php';
                 <?php foreach ($marcas as $marca): ?>
 
                     <tr>
-                        <td>
+                        <td data-label="Nombre">
                             <?= htmlspecialchars($marca['nombre']) ?>
                         </td>
 
-                        <td>
+                        <td data-label="Estado">
                             <?= $marca['activo'] ? 'Activa' : 'Inactiva' ?>
                         </td>
 
-                        <td>
+                       <td data-label="Acciones">
                             <div class="admin-acciones">
 
                                 <a href="<?= BASE_URL ?>/admin.php?page=marcas&amp;accion=editar&amp;id=<?= $marca['id'] ?>">
