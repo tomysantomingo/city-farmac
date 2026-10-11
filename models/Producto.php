@@ -8,6 +8,7 @@ class Producto
     public float $precio;
     public int $ranking;
     public string $imagen;
+    public bool $destacado;
 
     public function __construct(
         int $id,
@@ -15,7 +16,8 @@ class Producto
         string $marca,
         float $precio,
         int $ranking,
-        string $imagen
+        string $imagen,
+        bool $destacado = false
     ) {
         $this->id = $id;
         $this->nombre = $nombre;
@@ -23,5 +25,6 @@ class Producto
         $this->precio = $precio;
         $this->ranking = $ranking;
         $this->imagen = $imagen;
+        $this->destacado = $destacado;
     }
 }

@@ -14,7 +14,7 @@
 
     <div class="productos-grid">
 
-        <?php foreach ($productos as $producto): ?>
+        <?php foreach ($productosDestacados as $producto): ?>
 
             <?php require __DIR__ . '/../components/producto-card.php'; ?>
 

@@ -8,9 +8,24 @@ $page = $_GET['page'] ?? 'home';
 
 // Determinar qué vista mostrar
 switch ($page) {
+    
     case 'home':
-        $vista = __DIR__ . '/views/public/home.php';
-        break;
+
+    // Seleccionar únicamente productos destacados
+    $productosDestacados = array_filter(
+        $productos,
+        fn($producto) => $producto->destacado
+    );
+
+    // Mostrar un máximo de seis
+    $productosDestacados = array_slice(
+        $productosDestacados,
+        0,
+        6
+    );
+
+    $vista = __DIR__ . '/views/public/home.php';
+    break;
 
     case 'productos':
     $vista = __DIR__ . '/views/public/productos.php';

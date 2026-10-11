@@ -9,7 +9,8 @@ $productos = [
         'Dermaglós',
         18500,
         5,
-        'productos/protector-solar.webp'
+        'productos/protector-solar.webp',
+        true
     ),
 
     new Producto(
@@ -18,7 +19,8 @@ $productos = [
         'L\'Oréal',
         8500,
         4,
-        'productos/shampoo-reparador.jpg'
+        'productos/shampoo-reparador.jpg',
+        true
     ),
 
     new Producto(
@@ -27,7 +29,8 @@ $productos = [
         'Nivea',
         7200,
         4,
-        'productos/crema-hidratante.png'
+        'productos/crema-hidratante.png',
+        true
     ),
 
     new Producto(
@@ -36,7 +39,8 @@ $productos = [
         'Antonio Banderas',
         32000,
         5,
-        'productos/perfume-the-icon.jpg'
+        'productos/perfume-the-icon.jpg',
+        true
     ),
 
     new Producto(
@@ -45,7 +49,8 @@ $productos = [
         'Garnier',
         9400,
         4,
-        'productos/agua-micelar.webp'
+        'productos/agua-micelar.webp',
+        true
     ),
 
     new Producto(
@@ -54,6 +59,7 @@ $productos = [
         'Nivea',
         4500,
         3,
-        'productos/balsamo-labial.webp'
+        'productos/balsamo-labial.webp',
+        true
     )
 ];
