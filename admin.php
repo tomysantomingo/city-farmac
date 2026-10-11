@@ -56,6 +56,13 @@ switch ($seccion) {
     $vista = __DIR__ . '/views/admin/usuarios.php';
     break;
 
+    case 'perfiles':
+    require_once __DIR__ . '/data/perfiles.php';
+    require_once __DIR__ . '/controllers/admin/perfiles.php';
+
+    $vista = __DIR__ . '/views/admin/perfiles.php';
+    break;
+
     default:
         http_response_code(404);
         require __DIR__ . '/views/public/404.php';

@@ -436,3 +436,46 @@
         min-width: 140px;
     }
 }
+
+
+/* ========================================
+   PERFILES - PERMISOS DE ACCESO
+======================================== */
+
+.admin-permisos {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0;
+}
+
+.admin-permisos legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.admin-permisos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.admin-permiso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.admin-permiso input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    accent-color: #087f73;
+}
+
+@media (max-width: 480px) {
+
+    .admin-permisos-lista {
+        grid-template-columns: 1fr;
+    }
+}
