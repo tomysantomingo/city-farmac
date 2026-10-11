@@ -1,13 +1,32 @@
 
 <h2>Registro de usuario</h2>
 
-<?php
-$mensajeAviso = $_SERVER['REQUEST_METHOD'] === 'POST'
-    ? 'Formulario de demostración: no se creó ningún usuario.'
-    : '';
 
-require __DIR__ . '/../components/aviso.php';
-?>
+    <?php
+
+        $mensajeAviso = '';
+        $tipoAviso = 'info';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $password = $_POST['password'] ?? '';
+            $confirmar = $_POST['confirmar'] ?? '';
+
+            if (
+                !is_string($password) ||
+                !is_string($confirmar) ||
+                $password !== $confirmar
+            ) {
+                $mensajeAviso = 'Las contraseñas no coinciden.';
+                $tipoAviso = 'error';
+            } else {
+                $mensajeAviso = 'Formulario de demostración: no se creó ningún usuario.';
+            }
+        }
+
+        require __DIR__ . '/../components/aviso.php';
+
+    ?>
 
 <form class="admin-form"
       action="<?= BASE_URL ?>/admin.php?page=registro"
