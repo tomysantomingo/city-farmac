@@ -11,6 +11,8 @@ class Producto
     public bool $destacado;
     public string $categoria;
     public string $subcategoria;
+    public string $descripcion;
+    public string $modelo;
 
     public function __construct(
         int $id,
@@ -21,7 +23,9 @@ class Producto
         string $imagen,
         bool $destacado = false,
         string $categoria = 'Sin categoría',
-        string $subcategoria = 'General'
+        string $subcategoria = 'General',
+        string $descripcion = 'Descripción no disponible',
+        string $modelo = 'No especificado'
     ) {
         $this->id = $id;
         $this->nombre = $nombre;
@@ -32,5 +36,7 @@ class Producto
         $this->destacado = $destacado;
          $this->categoria = $categoria;
         $this->subcategoria = $subcategoria;
+        $this->descripcion = $descripcion;
+        $this->modelo = $modelo;
     }
 }

@@ -12,7 +12,9 @@ $productos = [
         'productos/protector-solar.webp',
         true,
         'Farmacia',
-        'Protección solar'
+        'Protección solar',
+        'Protector solar de alta protección para todo tipo de pieles.',
+        'FPS 50'
     ),
 
     new Producto(
@@ -24,7 +26,9 @@ $productos = [
         'productos/shampoo-reparador.jpg',
         true,
         'Cuidado personal',
-        'Cuidado capilar'
+        'Cuidado capilar',
+        'Shampoo reparador diseñado para limpiar y cuidar el cabello, ayudando a mantenerlo suave y saludable.',
+        'Reparador'    
     ),
     
     new Producto(
@@ -36,7 +40,9 @@ $productos = [
         'productos/crema-hidratante.png',
         true,
         'Cuidado personal',
-        'Cuidado facial'
+        'Cuidado facial',
+        'Crema hidratante para el rostro, ideal para mantener la piel suave y nutrida durante todo el día.',
+        'Hidratante'
     ),
 
     new Producto(
@@ -48,7 +54,9 @@ $productos = [
         'productos/perfume-the-icon.jpg',
         true,
         'Perfumería',
-        'Perfumes'
+        'Perfumes',
+        'Perfume masculino con aroma fresco y duradero, ideal para cualquier ocasión.',
+        'The Icon'
     ),
 
     new Producto(
@@ -60,7 +68,9 @@ $productos = [
         'productos/agua-micelar.webp',
         true,
         'Cuidado personal',
-        'Cuidado facial'    
+        'Cuidado facial',
+        'Agua micelar que limpia y desmaquilla la piel, eliminando impurezas sin irritarla.',
+        'Agua Micelar'
     ),
 
     new Producto(
@@ -72,6 +82,8 @@ $productos = [
         'productos/balsamo-labial.webp',
         true,
         'Farmacia',
-        'Cuidado Labial'
+        'Cuidado Labial',
+        'Bálsamo para el cuidado diario de los labios, ayudando a mantenerlos suaves e hidratados.',
+        'Balsamo Labial'
     )
 ];

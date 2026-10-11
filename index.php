@@ -32,6 +32,19 @@ switch ($page) {
     $vista = __DIR__ . '/views/public/productos.php';
     break;
 
+    case 'detalle':
+
+    require __DIR__ . '/controllers/detalle.php';
+
+    if ($productoDetalle === null) {
+        http_response_code(404);
+        require __DIR__ . '/views/public/404.php';
+        exit;
+    }
+
+    $vista = __DIR__ . '/views/public/detalle.php';
+    break;
+
     default:
     http_response_code(404);
     require __DIR__ . '/views/public/404.php';

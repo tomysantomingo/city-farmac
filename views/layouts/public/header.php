@@ -7,17 +7,22 @@
 
     <title>City Farmac</title>
 
-        <!-- Estilos globales -->
+    <!-- Estilos globales -->
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/global.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/global.css') ?>">
 
-    <!-- Estilos específicos del Home -->
+    <!-- Estilos Home -->
     <?php if ($page === 'home'): ?>
         <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/home.css') ?>">
     <?php endif; ?>
 
-    <!-- Estilos específicos del productos -->
+    <!-- Estilos productos -->
     <?php if ($page === 'productos'): ?>
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/productos.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/productos.css') ?>">
+    <?php endif; ?>
+
+    <!-- Estilos detalle -->
+    <?php if ($page === 'detalle'): ?>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/detalle.css?v=<?= filemtime(__DIR__ . '/../../../assets/css/detalle.css') ?>">
     <?php endif; ?>
 
 
