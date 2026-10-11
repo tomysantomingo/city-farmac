@@ -5,7 +5,7 @@
     background: #f5f5f5;
 }
 
-/* HEADER ADMINISTRATIVO  */
+/* HEADER ADMINISTRATIVO */
 
 .admin-header {
     background: #075e54;
@@ -90,13 +90,7 @@
     margin-top: 0;
 }
 
-/* LOGIN Y REGISTRO */
-
-.admin-layout--auth {
-    grid-template-columns: minmax(0, 500px);
-    justify-content: center;
-    align-items: center;
-}
+/* FORMULARIOS GENERALES */
 
 .admin-form {
     display: flex;
@@ -127,6 +121,14 @@
 
 .admin-campo textarea {
     resize: vertical;
+}
+
+/* LOGIN Y REGISTRO */
+
+.admin-layout--auth {
+    grid-template-columns: minmax(0, 500px);
+    justify-content: center;
+    align-items: center;
 }
 
 /* BOTONES GENERALES */
@@ -163,14 +165,10 @@
 
     color: white;
     text-decoration: none;
-
     margin: 20px 0;
 }
 
-.admin-enlace-boton:visited {
-    color: white;
-}
-
+.admin-enlace-boton:visited,
 .admin-enlace-boton:hover {
     color: white;
     text-decoration: none;
@@ -182,6 +180,8 @@
     color: #666;
     font-size: 0.9rem;
 }
+
+/* Se conserva para estados vacíos de tablas */
 
 .admin-aviso {
     background: #e0f2ef;
@@ -214,12 +214,12 @@
     background: #c5e9e2;
 }
 
-/* ADMINISTRACIÓN DE PRODUCTOS */
+/* FILTROS ADMINISTRATIVOS */
 
 .admin-filtros {
     display: flex;
     flex-wrap: wrap;
-    align-items: end;
+    align-items: flex-end;
     gap: 15px;
 
     margin: 10px 0 25px;
@@ -229,32 +229,52 @@
     border-radius: 8px;
 }
 
+/* Campos de filtros */
+
 .admin-filtros .admin-campo {
-    flex: 1;
+    flex: 1 1 220px;
     min-width: 180px;
 }
 
 .admin-filtros select {
     width: 100%;
-    padding: 12px;
+    height: 44px;
+    padding: 0 12px;
+
     border: 1px solid #ccc;
     border-radius: 6px;
     background: white;
     font: inherit;
 }
 
-.admin-filtros a {
-    color: #087f73;
-    text-decoration: none;
-    padding: 10px 0;
+/* Botón Filtrar */
+
+.admin-filtros .admin-boton {
+    align-self: auto;
+    height: 44px;
+    flex: 0 0 auto;
 }
 
-.admin-filtros a:hover {
+/* Enlace Limpiar */
+
+.admin-filtros > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    align-self: auto;
+    min-height: 44px;
+    padding: 0 6px;
+
+    color: #087f73;
+    text-decoration: none;
+}
+
+.admin-filtros > a:hover {
     text-decoration: underline;
 }
 
 /* TABLAS ADMINISTRATIVAS */
-
 
 .admin-tabla-contenedor {
     width: 100%;
@@ -262,8 +282,6 @@
     overflow-x: auto;
     margin-top: 20px;
 }
-
-/* Tabla */
 
 .admin-tabla {
     width: 100%;
@@ -306,7 +324,7 @@
     min-width: 170px;
 }
 
-/* ACCIONES DE LA TABLA */
+/* ACCIONES DE LAS TABLAS */
 
 .admin-acciones {
     display: flex;
@@ -317,7 +335,6 @@
 
 .admin-acciones a {
     display: block;
-
     padding: 9px 12px;
     border-radius: 5px;
 
@@ -336,18 +353,7 @@
     text-decoration: none;
 }
 
-/* FORMULARIOS ADMINISTRATIVOS */
-
-.admin-form select,
-.admin-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font: inherit;
-}
-
-/* Checkbox destacado */
+/* CHECKBOX DESTACADO */
 
 .admin-check {
     display: flex;
@@ -360,87 +366,7 @@
     margin: 0;
 }
 
-/* ACCESIBILIDAD */
-
-.admin-body a:focus-visible,
-.admin-body button:focus-visible,
-.admin-body input:focus-visible,
-.admin-body select:focus-visible,
-.admin-body textarea:focus-visible {
-    outline: 3px solid #087f73;
-    outline-offset: 3px;
-}
-
-/* FOOTER */
-
-.admin-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* RESPONSIVE - TABLETS */
-
-@media (max-width: 768px) {
-
-    .admin-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .admin-header-contenido {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .admin-content {
-        padding: 20px;
-    }
-
-    .admin-sidebar nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .admin-filtros {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .admin-filtros .admin-campo {
-        min-width: 0;
-    }
-
-    .admin-tabla {
-        min-width: 780px;
-    }
-}
-
-/* RESPONSIVE - CELULARES */
-
-@media (max-width: 480px) {
-
-    .admin-dashboard {
-        grid-template-columns: 1fr;
-    }
-
-    .admin-sidebar nav {
-        flex-direction: column;
-    }
-
-    .admin-content {
-        padding: 15px;
-    }
-
-    .admin-acciones {
-        min-width: 140px;
-    }
-}
-
-
-/* ========================================
-   PERFILES - PERMISOS DE ACCESO
-======================================== */
+/* PERFILES - PERMISOS DE ACCESO */
 
 .admin-permisos {
     border: 1px solid #ddd;
@@ -473,7 +399,98 @@
     accent-color: #087f73;
 }
 
+/* ACCESIBILIDAD  */
+
+.admin-body a:focus-visible,
+.admin-body button:focus-visible,
+.admin-body input:focus-visible,
+.admin-body select:focus-visible,
+.admin-body textarea:focus-visible {
+    outline: 3px solid #087f73;
+    outline-offset: 3px;
+}
+
+/* FOOTER ADMINISTRATIVO */
+
+.admin-footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE - TABLETS */
+
+@media (max-width: 768px) {
+
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admin-content {
+        padding: 20px;
+    }
+
+    /* Menú adaptable */
+
+    .admin-sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Filtros verticales */
+
+    .admin-filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-filtros .admin-campo {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .admin-filtros .admin-boton {
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .admin-filtros > a {
+        align-self: flex-start;
+    }
+
+    /* Tabla con scroll horizontal */
+
+    .admin-tabla {
+        min-width: 780px;
+    }
+}
+
+/* RESPONSIVE - CELULARES */
+
 @media (max-width: 480px) {
+
+    .admin-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar nav {
+        flex-direction: column;
+    }
+
+    .admin-content {
+        padding: 15px;
+    }
+
+    .admin-acciones {
+        min-width: 140px;
+    }
 
     .admin-permisos-lista {
         grid-template-columns: 1fr;
