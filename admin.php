@@ -48,6 +48,14 @@ switch ($seccion) {
     $vista = __DIR__ . '/views/admin/comentarios.php';
     break;
 
+    case 'usuarios':
+    require_once __DIR__ . '/data/usuarios.php';
+    require_once __DIR__ . '/data/perfiles.php';
+    require_once __DIR__ . '/controllers/admin/usuarios.php';
+
+    $vista = __DIR__ . '/views/admin/usuarios.php';
+    break;
+
     default:
         http_response_code(404);
         require __DIR__ . '/views/public/404.php';
