@@ -1,0 +1,222 @@
+
+/* PANEL ADMINISTRATIVO */
+
+.admin-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+/* Encabezado */
+
+.admin-header {
+    background: #075e54;
+    color: white;
+    padding: 20px 0;
+}
+
+.admin-header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.admin-header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Distribución principal */
+
+.admin-layout {
+    width: 94%;
+    max-width: 1200px;
+    margin: 25px auto;
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+/* Menú */
+
+.admin-sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.admin-sidebar h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.admin-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-sidebar a {
+    padding: 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.admin-sidebar a:hover {
+    background: #e0f2ef;
+    color: #075e54;
+}
+
+/* Contenido */
+
+.admin-content {
+    min-width: 0;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Login y registro */
+
+.admin-layout--auth {
+    grid-template-columns: minmax(0, 500px);
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.admin-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-campo label {
+    font-weight: bold;
+}
+
+.admin-campo input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.admin-boton {
+    background: #087f73;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    align-self: flex-start;
+}
+
+.admin-boton:hover {
+    background: #06665d;
+}
+
+.admin-nota {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.admin-aviso {
+    background: #e0f2ef;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Pantalla principal */
+
+.admin-dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.admin-dashboard-card {
+    padding: 25px;
+    background: #e0f2ef;
+    color: #075e54;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.admin-dashboard-card:hover {
+    background: #c5e9e2;
+}
+
+/* Accesibilidad */
+
+.admin-body a:focus-visible,
+.admin-body button:focus-visible,
+.admin-body input:focus-visible {
+    outline: 3px solid #087f73;
+    outline-offset: 3px;
+}
+
+/* Footer */
+
+.admin-footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admin-content {
+        padding: 20px;
+    }
+
+    .admin-sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .admin-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar nav {
+        flex-direction: column;
+    }
+}
